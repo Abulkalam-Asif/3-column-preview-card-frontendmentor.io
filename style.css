@@ -51,6 +51,7 @@ img {
 }
 .btn {
 	width: fit-content;
+	width: -moz-fit-content;
 	background: var(--clr-h-bg-btn);
 	padding: .7rem 1.5rem;
 	border-radius: 100px;
