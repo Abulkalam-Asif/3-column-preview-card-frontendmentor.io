@@ -1,0 +1,119 @@
+:root {
+	--ff-primary: 'Lexend Deca', sans-serif;
+	--ff-secondary: 'Big Shoulders Display', cursive;
+
+	--clr-1: hsl(31, 77%, 52%);
+	--clr-2: hsl(184, 100%, 22%);
+	--clr-3: hsl(179, 100%, 13%);
+	--clr-p: hsla(0, 0%, 100%, 0.75);
+	--clr-h-bg-btn: hsl(0, 0%, 95%);
+}
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+body {
+	margin: 0;
+	padding: 0;
+	line-height: 1.5;
+	min-height: 100vh;
+	font-family: var(--ff-primary);
+	font-weight: 400;
+	background: var(--clr-h-bg-btn);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+h1 {
+	line-height: 1;
+	color: var(--clr-h-bg-btn);
+	font-family: var(--ff-secondary);
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 2.5rem;
+}
+p {
+	color: var(--clr-p);
+	font-size: .9rem;
+	margin-bottom: 4rem;
+}
+img {
+	max-width: 100%;
+}
+/* General Classes */
+.vehicleSec {
+	padding: 3rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 100%;
+}
+.btn {
+	width: fit-content;
+	background: var(--clr-h-bg-btn);
+	padding: .7rem 1.5rem;
+	border-radius: 100px;
+	text-decoration: none;
+	border: 2px solid #fff;
+	transition: background .3s, color .3s;
+}
+.btn:hover, .btn:focus {
+	background: transparent;
+	color: #fff;
+}
+/* Main Styling */
+main {
+	width: 80%;
+	max-width: 900px;
+	display: flex;
+}
+
+#sedansSec {
+	background: var(--clr-1);
+	border-radius: 10px 0 0 10px;
+}
+#sedansSec .btn {
+	color: var(--clr-1);
+}
+#sedansSec .btn:hover, #sedansSec .btn:focus,
+#suvsSec .btn:hover, #suvsSec .btn:focus,
+#luxurySec .btn:hover, #luxurySec .btn:focus {
+	color: #fff;
+}
+
+#suvsSec {
+	background: var(--clr-2);
+}
+#suvsSec .btn {
+	color: var(--clr-2);
+}
+#luxurySec {
+	background: var(--clr-3);
+	border-radius: 0 10px 10px 0;
+}
+#luxurySec .btn {
+	color: var(--clr-3);
+}
+
+footer {
+	text-align: center;
+	margin-top: 1rem;
+}
+
+@media (max-width: 1000px) {
+	main {
+		flex-direction: column;
+		max-width: 300px;
+	}
+
+	.vehicleSec {
+		padding: 2rem;
+	}
+	#sedansSec {
+		border-radius: 10px 10px 0 0;
+	}
+	#luxurySec {
+		border-radius: 0 0 10px 10px;
+	}
+}
